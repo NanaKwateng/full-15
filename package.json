@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "prisma generate && next build",
+    
+    
+    "postinstall": "prisma generate",
     "start": "next start",
-    "lint": "next lint",
-      "postinstall": "prisma generate"
+    "lint": "next lint"
   },
   "dependencies": {
     "@kinde-oss/kinde-auth-nextjs": "^2.5.6",
